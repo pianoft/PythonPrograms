@@ -10,7 +10,6 @@ tags=soup.select('pre')
 #\n.linefeeding
 f = open("input.txt", "w+")
 idx=0;
-t=[]
 i=1;
 n=int(len(tags))
 m=int(n/2)
