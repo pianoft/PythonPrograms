@@ -1,9 +1,9 @@
-n=int(input())
-state=0;
-for i in range(1,10):
-    for j in range(2,10):
-        t=i*j
-        if t==n:state=1
+from selenium import webdriver
 
-
-print("Yes"if state else "No")
+options = webdriver.ChromeOptions()
+options.add_argument('--incognito')  # secret mode
+#options.add_experimental_option('prefs', {'intl.accept_languages': 'en_US'}) # locale=en_US
+# use local driver
+driver = webdriver.Chrome(chrome_options=options)
+driver.get('https://www.google.com/?hl=ja')
+driver.current_url
