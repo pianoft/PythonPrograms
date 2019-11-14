@@ -3,9 +3,7 @@ from bs4 import BeautifulSoup
 s=open("tes.txt","r").read()
 r = requests.get(s)
 soup = BeautifulSoup(r.text,"lxml")
-
 tags = soup.find_all('h3', text=lambda t: t and 'Sample' in t)
-
 if len(tags)==0:
     tags = soup.find_all('h3', text=lambda t: t and '例' in t)
 

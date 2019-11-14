@@ -88,12 +88,18 @@ int main(){//swap(配列１,配列２)
 	//a.erase(a.begin()+5),a.insert(a.begin()+3,tmp)
 	ios_base::sync_with_stdio(0); cin.tie(0);
 clock_t start = clock();//時間測定
+//cin>>n;if(1&n){p((n-1)/2)r0}p((n/2)-1)
 cin>>n;
-
-if(1&n){
-p((n-1)/2)r0
+rp(i,1,10){
+	rp(j,i,10){
+		if(n==(i*j)){
+			p("Yes")r0
+		}
+	}
 }
-p((n/2)-1)
+
+p("No")
+
 
 
 return 0;
