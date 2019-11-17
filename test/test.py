@@ -1,10 +1,10 @@
-from selenium import webdriver
-import time
-from selenium.webdriver.common.alert import Alert
-options = webdriver.ChromeOptions()
-options.add_experimental_option('prefs', {'intl.accept_languages': 'en_US'})
-driver = webdriver.Chrome(chrome_options=options)
-driver.get('https://pdf2jpg.net/')
-element=driver.find_element_by_id("advanced_pdf_file")
-element.click().send_keys("Pycharm")
+import cv2
+img = cv2.imread('lena.jpg',1)
+cv2.imshow('image',img)
+k = cv2.waitKey(0)
 
+if k == 27:
+    cv2.destroyAllWindows()
+elif k == ord('s'):
+    cv2.imwrite('lena_copy.png', img)
+    cv2.destroyAllWindows()

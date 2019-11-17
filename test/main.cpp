@@ -82,23 +82,43 @@ typedef struct edge1{ll to,cost;}EDGE;
 vector<vector<EDGE>>G(1e6);
 ll n=0,m=0,mx=-INF,mn=INF,ct=0;
 bl used[(ll)1e9];
+vl x(10);
+vl y(10);
 ldb pi=3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679;
 template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; } return 0; }
 int main(){//swap(配列１,配列２)
 	//a.erase(a.begin()+5),a.insert(a.begin()+3,tmp)
 	ios_base::sync_with_stdio(0); cin.tie(0);
 clock_t start = clock();//時間測定
-//cin>>n;if(1&n){p((n-1)/2)r0}p((n/2)-1)
+//cin>>n;if(1&n){p((n-1)/2+++++)r0}p((n/2)-1)
 cin>>n;
-rp(i,1,10){
-	rp(j,i,10){
-		if(n==(i*j)){
-			p("Yes")r0
-		}
-	}
+r(i,n){
+cin>>x[i]>>y[i];
 }
+ldb p1=0,p2=0,p3=0;
+vl v(n);
+r(i,n){v[i]=i;}
+ldb dist=0;
+do{
+	dist=0;
+r(i,n-1){
+ll idx=v[i];
+ll idx2=v[i+1];
+t1=x[idx]-x[idx2];
+t2=y[idx]-y[idx2];
+t1*=t1;
+t2*=t2;
+t3=t1+t2;
+dist+=(sqrt(t3));
+}
+p1+=dist;
+}while(next_permutation(v.begin(),v.end()));
+t2=1;
+rp(i,1,n+1){
+	t2*=i;
+}
+cout<<setprecision(50)<<p1/t2<<endl;
 
-p("No")
 
 
 
