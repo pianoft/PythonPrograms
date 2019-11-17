@@ -15,4 +15,4 @@ callp.pyでmain.pyで上と同様の事をします.
 
 正誤判定用の時.
 
-gnome-terminal -- bash -c "cd PycharmProjects/test/test;python callc.py;sleep 7;exit;bash"
+gnome-terminal -- bash -c "cd test;python callc.py;sleep 7;exit;bash"
