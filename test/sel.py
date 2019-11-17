@@ -25,7 +25,6 @@ while 1:
 #    driver.get(t)
  #   driver.get_screenshot_as_file(os.getcwd() + "/former.png")
  #   driver.get(s)
-    print("撮影成功")
     if int(f2) == int(1):
         f2=open("abc.txt","w+")
         f2.write("0")
@@ -36,7 +35,7 @@ while 1:
         element.click()
         time.sleep(5)
     else:
-        print("ぽよ")
+        print("提出不可")
     if tmp==-1:
         continue
     f.write(driver.current_url);
