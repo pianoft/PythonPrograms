@@ -2,6 +2,7 @@ import os
 import tester
 import time
 n=tester.n
+os.system('rm ./a.out')
 os.system('g++ main2.cpp')
 myCmd='./a.out < '+'in'
 a=[0 for i in range(0,n+1)]

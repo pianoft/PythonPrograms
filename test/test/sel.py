@@ -49,6 +49,8 @@ def func():
         print("AC")
         ac += 1
         os.system("mpg123 " + ("AC.mp3") + " &")
+        os.system("cp main2.cpp yobi.cpp")
+        os.system("cp new.cpp main2.cpp")
         state = 1;
     if wa != s.count("Wrong Answer"):
         print("WA")
