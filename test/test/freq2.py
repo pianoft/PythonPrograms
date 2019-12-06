@@ -1,14 +1,21 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-import config
+import config,time
+def f():
+    time.sleep(0.8)
+    return
 options = webdriver.ChromeOptions()
 options.add_argument('--incognito')  # secret mode
 options.add_experimental_option('prefs', {'intl.accept_languages': 'en_US'}) # locale=en_US
-driver = webdriver.Chrome(chrome_options=options)
-driver.get(config.tmp10)
-element = driver.find_element_by_class_name(config.x1)
-element.send_keys(config.tmp9)
-element = driver.find_element_by_class_name(config.x2)
-element.send_keys(config.tmp8)
-element.send_keys(Keys.ENTER)
-print("成功2")
+d1= webdriver.Chrome(chrome_options=options)
+d1.get(config.x4)
+elmnt = d1.find_element_by_id(config.x5)
+elmnt.send_keys(config.x7)
+f()
+elmnt.send_keys(Keys.ENTER)
+f()
+elmnt=d1.find_element_by_id(config.x6)
+f()
+elmnt.send_keys(config.x3)
+elmnt.send_keys(Keys.ENTER)
+d1.get(config.x8)
