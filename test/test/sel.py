@@ -75,7 +75,7 @@ def func():
 init()
 while 1:
     driver1.refresh()
-    time.sleep(1)
+    time.sleep(2)
     func()
     f=open("tes.txt","w+")
     s = driver2.current_url
