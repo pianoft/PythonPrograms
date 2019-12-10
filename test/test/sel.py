@@ -76,6 +76,7 @@ init()
 while 1:
     judgement_window.refresh()
     time.sleep(0.5)
+
     f=open("tes.txt","w+")
     s = TargetProblemWindow.current_url
     tmp = s.find('tasks/')
@@ -100,8 +101,10 @@ while 1:
         elmnt.send_keys(os.getcwd() + "/main2.cpp")
         elmnt=TargetProblemWindow.find_element_by_id("submit")
         elmnt.click()
+    print("判定結果")
+    func()
     if tmp==-1:
         continue
-    func()
+
     f.write(TargetProblemWindow.current_url)
-    print(TargetProblemWindow.current_url)
+    print(TargetProblemWindow.current_url+"The code2  hsbn updated.")

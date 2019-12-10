@@ -19,6 +19,9 @@ element.send_keys(config.tmp2)
 element = d1.find_element_by_id(config.urlJ)
 element.click()
 d1.get(config.urlC)
+time.sleep(1)
+d1.back()
+'''
 ##tillhere
 #from here
 d2 = webdriver.Chrome(chrome_options=options)
@@ -73,3 +76,4 @@ print("成功12")
 while 1:
     d1.refresh()
     time.sleep(30)
+'''
